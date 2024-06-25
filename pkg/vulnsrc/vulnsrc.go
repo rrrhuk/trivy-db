@@ -5,6 +5,7 @@ import (
 	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/alma"
 	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/alpine"
 	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/amazon"
+	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/anolis"
 	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/bitnami"
 	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/bundler"
 	"github.com/aquasecurity/trivy-db/pkg/vulnsrc/chainguard"
@@ -57,6 +58,8 @@ var (
 		bitnami.NewVulnSrc(),
 
 		k8svulndb.NewVulnSrc(),
+
+		anolis.NewVulnSrc(),
 
 		// Language-specific packages
 		bundler.NewVulnSrc(),
